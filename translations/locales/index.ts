@@ -1,9 +1,7 @@
 import en from './en'
-import fr from './fr'
-import pl from './pl'
+import ru from './ru'
 
 export default {
-  fr,
+  ru,
   en,
-  pl
 }
