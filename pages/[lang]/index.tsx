@@ -7,6 +7,7 @@ const IndexPage: React.FC = () => {
   return (
     <Layout titleKey="notAPipe">
       <Painting />
+      <Painting />
     </Layout>
   )
 }
