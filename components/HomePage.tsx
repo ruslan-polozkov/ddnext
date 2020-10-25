@@ -1,13 +1,14 @@
-// import SliderMy from "../components/SliderMy";
+import SliderAdvantages from "../components/SliderAdvantages";
+import SliderMy from "../components/SliderMy";
 import Link from "next/link";
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import useTranslation from '../hooks/useTranslation'
 
 // import Slider from "react-slick"
 
 const HomePage = () => {
   const { locale, t } = useTranslation()
-  const [accordionState, accordionSetState] = useState("01")
+  // const [accordionState, accordionSetState] = useState("01")
   console.log(locale)
 
   const bgImage = {
@@ -44,23 +45,23 @@ const HomePage = () => {
   //   ]
   // }
 
-  function accordionStateChange(event:any) {
-    accordionSetState(event.target.closest(".list_item").dataset.advantagesItem)
-
-    const slidersArr = document.querySelectorAll(".inner_slides .list_item")
-    const menuArr = document.querySelectorAll(".context_list .list_item")
-
-    menuArr.forEach(item => item.classList.remove("active"))
-    slidersArr.forEach(item => {
-      if (item.getAttribute("data-slider-item") === accordionState) {
-        item.classList.add("active")
-      } else {
-        item.classList.remove("active")
-      }
-    })
-
-    event.target.closest(".list_item").classList.add("active")
-  }
+  // function accordionStateChange(event:any) {
+  //   accordionSetState(event.target.closest(".list_item").dataset.advantagesItem)
+  //
+  //   const slidersArr = document.querySelectorAll(".inner_slides .list_item")
+  //   const menuArr = document.querySelectorAll(".context_list .list_item")
+  //
+  //   menuArr.forEach(item => item.classList.remove("active"))
+  //   slidersArr.forEach(item => {
+  //     if (item.getAttribute("data-slider-item") === accordionState) {
+  //       item.classList.add("active")
+  //     } else {
+  //       item.classList.remove("active")
+  //     }
+  //   })
+  //
+  //   event.target.closest(".list_item").classList.add("active")
+  // }
 
   function highLight () {
     const menuArr = document.querySelectorAll(".advantages .context_list .list_item")
@@ -166,7 +167,7 @@ const HomePage = () => {
       <article className="game-list">
         <div className="global-container">
           <div className="list_inner">
-            {/*<SliderMy />*/}
+            <SliderMy />
           </div>
         </div>
       </article>
@@ -203,80 +204,81 @@ const HomePage = () => {
                 <span>{t("advantages.context_title")}</span>
               </div>
               <div className="context_text">{t("advantages.context_text")}</div>
-              <ul className="context_list slick-center-wrap">
+              <SliderAdvantages />
+              {/*<ul className="context_list slick-center-wrap">*/}
                 {/*<Slider> {...settingsSlider}>*/}
-                  <li
-                    className="list_item active"
-                    data-advantages-item="01"
-                    onClick={accordionStateChange}
-                  >
-                    <img
-                      className="item_pic"
-                      src="/img/advantage-1.jpg"
-                      alt={t("advantages.context_list_item_txt_01")}
-                    />
-                    <span className="item_txt">
-                      {t("advantages.context_list_item_txt_01")}
-                    </span>
-                  </li>
-                  <li
-                    className="list_item"
-                    data-advantages-item="02"
-                    onClick={accordionStateChange}
-                  >
-                    <img
-                      className="item_pic"
-                      src="/img/advantage-2.jpg"
-                      alt={t("advantages.context_list_item_txt_02")}
-                    />
-                    <span className="item_txt">
-                      {t("advantages.context_list_item_txt_02")}
-                    </span>
-                  </li>
-                  <li
-                    className="list_item"
-                    data-advantages-item="03"
-                    onClick={accordionStateChange}
-                  >
-                    <img
-                      className="item_pic"
-                      src="/img/advantage-3.jpg"
-                      alt={t("advantages.context_list_item_txt_03")}
-                    />
-                    <span className="item_txt">
-                      {t("advantages.context_list_item_txt_03")}
-                    </span>
-                  </li>
-                  <li
-                    className="list_item"
-                    data-advantages-item="04"
-                    onClick={accordionStateChange}
-                  >
-                    <img
-                      className="item_pic"
-                      src="/img/advantage-4.jpg"
-                      alt={t("advantages.context_list_item_txt_04")}
-                    />
-                    <span className="item_txt">
-                      {t("advantages.context_list_item_txt_04")}
-                    </span>
-                  </li>
-                  <li
-                    className="list_item"
-                    data-advantages-item="05"
-                    onClick={accordionStateChange}
-                  >
-                    <img
-                      className="item_pic"
-                      src="/img/advantage-1.jpg"
-                      alt={t("advantages.context_list_item_txt_05")}
-                    />
-                    <span className="item_txt">
-                      {t("advantages.context_list_item_txt_05")}
-                    </span>
-                  </li>
+                {/*  <li*/}
+                {/*    className="list_item active"*/}
+                {/*    data-advantages-item="01"*/}
+                {/*    onClick={accordionStateChange}*/}
+                {/*  >*/}
+                {/*    <img*/}
+                {/*      className="item_pic"*/}
+                {/*      src="/img/advantage-1.jpg"*/}
+                {/*      alt={t("advantages.context_list_item_txt_01")}*/}
+                {/*    />*/}
+                {/*    <span className="item_txt">*/}
+                {/*      {t("advantages.context_list_item_txt_01")}*/}
+                {/*    </span>*/}
+                {/*  </li>*/}
+                {/*  <li*/}
+                {/*    className="list_item"*/}
+                {/*    data-advantages-item="02"*/}
+                {/*    onClick={accordionStateChange}*/}
+                {/*  >*/}
+                {/*    <img*/}
+                {/*      className="item_pic"*/}
+                {/*      src="/img/advantage-2.jpg"*/}
+                {/*      alt={t("advantages.context_list_item_txt_02")}*/}
+                {/*    />*/}
+                {/*    <span className="item_txt">*/}
+                {/*      {t("advantages.context_list_item_txt_02")}*/}
+                {/*    </span>*/}
+                {/*  </li>*/}
+                {/*  <li*/}
+                {/*    className="list_item"*/}
+                {/*    data-advantages-item="03"*/}
+                {/*    onClick={accordionStateChange}*/}
+                {/*  >*/}
+                {/*    <img*/}
+                {/*      className="item_pic"*/}
+                {/*      src="/img/advantage-3.jpg"*/}
+                {/*      alt={t("advantages.context_list_item_txt_03")}*/}
+                {/*    />*/}
+                {/*    <span className="item_txt">*/}
+                {/*      {t("advantages.context_list_item_txt_03")}*/}
+                {/*    </span>*/}
+                {/*  </li>*/}
+                {/*  <li*/}
+                {/*    className="list_item"*/}
+                {/*    data-advantages-item="04"*/}
+                {/*    onClick={accordionStateChange}*/}
+                {/*  >*/}
+                {/*    <img*/}
+                {/*      className="item_pic"*/}
+                {/*      src="/img/advantage-4.jpg"*/}
+                {/*      alt={t("advantages.context_list_item_txt_04")}*/}
+                {/*    />*/}
+                {/*    <span className="item_txt">*/}
+                {/*      {t("advantages.context_list_item_txt_04")}*/}
+                {/*    </span>*/}
+                {/*  </li>*/}
+                {/*  <li*/}
+                {/*    className="list_item"*/}
+                {/*    data-advantages-item="05"*/}
+                {/*    onClick={accordionStateChange}*/}
+                {/*  >*/}
+                {/*    <img*/}
+                {/*      className="item_pic"*/}
+                {/*      src="/img/advantage-1.jpg"*/}
+                {/*      alt={t("advantages.context_list_item_txt_05")}*/}
+                {/*    />*/}
+                {/*    <span className="item_txt">*/}
+                {/*      {t("advantages.context_list_item_txt_05")}*/}
+                {/*    </span>*/}
+                {/*  </li>*/}
                 {/*</Slider>*/}
-              </ul>
+              {/*</ul>*/}
             </div>
 
             <div className="inner_slides">
