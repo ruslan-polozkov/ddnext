@@ -1,0 +1,39 @@
+.up-container {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  position: fixed;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  transition: 240ms;
+  cursor: pointer;
+
+  .up-img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+
+    img {
+      opacity: .6;
+    }
+  }
+
+  &:hover {
+    .up-img {
+      background-color: #bfbfbf;
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

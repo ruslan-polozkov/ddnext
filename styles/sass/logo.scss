@@ -1,0 +1,44 @@
+.logo {
+  position: relative;
+  z-index: 3;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .gatsby-image-wrapper {
+      margin-right: 1rem;
+    }
+    span {
+      margin-top: .1rem;
+      font-size: 4.4rem;
+      line-height: 1.1;
+      font-family: Gilroy-Bold;
+      color: #fff;
+    }
+  }
+  span {
+    cursor: pointer;
+    margin-top: .1rem;
+    font-size: 4.4rem;
+    line-height: 1.1;
+    font-family: Gilroy-Bold;
+    color: #fff;
+  }
+}
+.header {
+  &.opened {
+    span {
+      color: #fff !important;
+    }
+    a {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+}

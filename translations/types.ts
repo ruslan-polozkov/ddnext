@@ -2,12 +2,18 @@ import { locales } from './config'
 
 export type Locale = typeof locales[number]
 
-export type Strings = {
-  [key in Locale]: {
-    [key: string]: string
-  }
+export interface Translations {
+  [key: string]: string
 }
 
-export function isLocale(tested: string): tested is Locale {
+export type Strings = {
+  [key in Locale]: Translations
+}
+
+export interface Namespace {
+  namespace: string
+}
+
+export function isLocale(tested: any): tested is Locale {
   return locales.some(locale => locale === tested)
 }

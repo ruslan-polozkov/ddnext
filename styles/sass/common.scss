@@ -1,0 +1,116 @@
+html,
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Gilroy", "Helvetica World", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  height: auto;
+  font-size: 10px;
+  line-height: 10px;
+
+  &.scroll-hidden {
+    overflow: hidden !important;
+  }
+
+  @media screen and ("max-width: 960px") {
+    font-size: 9px;
+    line-height: 9px;
+  }
+  @media screen and ("max-width: 560px") {
+    font-size: 7.6px;
+    line-height: 7.6px;
+  }
+}
+
+body {
+  overflow-y: auto; // fix for spinner
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+svg,
+use,
+img {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+img {
+  height: auto;
+}
+
+use {
+  fill: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+article {
+  position: relative;
+  padding: 8rem 0;
+
+  @media screen and ("max-width: 960px") {
+    padding: 6rem 0;
+  }
+  @media screen and ("max-width: 560px") {
+    padding: 4rem 0;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  padding-bottom: 30rem;
+  position: relative;
+}
+
+h1,h2,h3,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
+  font-family: Gilroy-Bold;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.dnone {
+  display: none !important;
+}

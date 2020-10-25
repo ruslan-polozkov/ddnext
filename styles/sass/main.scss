@@ -1,0 +1,116 @@
+.main {
+  min-height: 100vh;
+  padding: 16rem 0;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    height: 50%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    background-color: #000;
+    opacity: 0.7;
+  }
+
+  .global-container {
+    z-index: 3;
+
+    .main_content {
+      position: relative;
+      min-height: 70rem;
+      height: 100%;
+      background: #fff;
+      border-radius: 1rem;
+      padding: 4.2rem 3.8rem;
+
+      .content {
+        &_title {
+          text-align: center;
+          margin-bottom: 3rem;
+          font-size: 3.6rem;
+          line-height: 4.2rem;
+          color: #212121;
+        }
+
+        &_img {
+          text-align: center;
+          margin: 0 auto 2.4rem;
+          height: 36.2rem;
+          border-radius: 1rem;
+        }
+
+        &_text {
+          color: #424242;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+
+          .text_paragraph {
+            margin-bottom: 1.8rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.error {
+    .main_content {
+      .content {
+        &_title {
+
+          h2 {
+            margin-bottom: 14rem;
+          }
+
+          a {
+            border: 1px solid #4aac00;
+            border-radius: 3px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: .6rem 1.2rem;
+            font-size: 2rem;
+            color: #4aac00;
+            transition: 240ms;
+            box-shadow: 0 0 2px rgba(0,0,0, .3);
+
+            &:hover {
+              text-decoration: none;
+              box-shadow: none;
+              color: #fff;
+              background-color: #000;
+            }
+          }
+        }
+
+        &_img {
+          height: 241px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+
+          img {
+            margin: auto;
+            display: block;
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
