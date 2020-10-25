@@ -21,6 +21,7 @@ module.exports = withSass(withFonts({
     // webpack(config, options) {
     //     return config;
     // },
+    target: 'serverless',
     experimental: { scss: true },
     trailingSlash: true,
     async rewrites() {
