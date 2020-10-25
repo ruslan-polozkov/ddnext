@@ -13,6 +13,10 @@ interface LangProps {
 
 export default (namespace: string) => (WrappedPage: NextPage<any>) => {
   const WithLocale: NextPage<any, LangProps> = ({ locale, translations, ...pageProps }) => {
+    console.log('namespace', namespace)
+    console.log('locale', locale)
+    console.log('translations', translations)
+    console.log('...pageProps', {...pageProps})
     if (!locale) {
       return <Error statusCode={404} />
     }
@@ -34,6 +38,7 @@ export default (namespace: string) => (WrappedPage: NextPage<any>) => {
     if (typeof ctx.query.lang !== 'string' || !isLocale(ctx.query.lang)) {
       return { ...pageProps }
     }
+    console.log('ctx.query.lang', ctx.query.lang)
     const url = process.env.NODE_ENV === 'production' ? 'https://simple-i18n-example.fwojciec.now.sh' : 'http://localhost:3000'
     const translations = await fetch(`${url}/api/${ctx.query.lang}?namespace=${namespace}`).then(data => data.json())
     return { ...pageProps, locale: ctx.query.lang, translations }

@@ -1,0 +1,8 @@
+.game-list {
+  @media screen and ("max-width: 960px") {
+    padding: 6rem 0 8rem;
+  }
+  @media screen and ("max-width: 560px") {
+    padding: 4rem 0 6rem;
+  }
+}

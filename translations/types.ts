@@ -14,6 +14,6 @@ export interface Namespace {
   namespace: string
 }
 
-export function isLocale(tested: string): tested is Locale {
+export function isLocale(tested: any): tested is Locale {
   return locales.some(locale => locale === tested)
 }
