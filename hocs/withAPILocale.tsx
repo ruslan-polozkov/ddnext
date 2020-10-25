@@ -39,7 +39,7 @@ export default (namespace: string) => (WrappedPage: NextPage<any>) => {
       return { ...pageProps }
     }
     console.log('ctx.query.lang', ctx.query.lang)
-    const url = process.env.NODE_ENV === 'production' ? 'https://simple-i18n-example.fwojciec.now.sh' : 'http://localhost:3000'
+    const url = process.env.NODE_ENV === 'production' ? 'https://gracious-jepsen-1b6f55.netlify.app/' : 'http://localhost:3000'
     const translations = await fetch(`${url}/api/${ctx.query.lang}?namespace=${namespace}`).then(data => data.json())
     return { ...pageProps, locale: ctx.query.lang, translations }
   }
