@@ -14,10 +14,10 @@ const Navigation = () => {
           <li className="list_item">
             {locale === "ru" ? <Link
               href="/[lang]/istoriya-domino" as={`/${locale}/istoriya-domino`}>
-              <a target="_blank">{t("header.header-about")}</a>
+              <a>{t("header.header-about")}</a>
             </Link> : <Link
               href="/[lang]/history-of-dominoes" as={`/${locale}/history-of-dominoes`}>
-              <a target="_blank">{t("header.header-about")}</a>
+              <a>{t("header.header-about")}</a>
             </Link>}
           </li>
           <li
@@ -35,37 +35,37 @@ const Navigation = () => {
               <div className="menu_item">
                 {locale === "ru" ? <Link
                   href="/[lang]/domino-online" as={`/${locale}/domino-online`}>
-                  <a target="_blank">{t("header.header-types-domino-online")}</a>
+                  <a>{t("header.header-types-domino-online")}</a>
                 </Link> : <Link
                   href="/[lang]/dominoes-online" as={`/${locale}/dominoes-online`}>
-                  <a target="_blank">{t("header.header-types-domino-online")}</a>
+                  <a>{t("header.header-types-domino-online")}</a>
                 </Link>}
               </div>
               <div className="menu_item">
                 {locale === "ru" ? <Link
                   href="/[lang]/domino-klassicheskoe" as={`/${locale}/domino-klassicheskoe`}>
-                  <a target="_blank">{t("header.header-types-domino-klassicheskoe")}</a>
+                  <a>{t("header.header-types-domino-klassicheskoe")}</a>
                 </Link> : <Link
                   href="/[lang]/dominoes-rules" as={`/${locale}/dominoes-rules`}>
-                  <a target="_blank">{t("header.header-types-domino-klassicheskoe")}</a>
+                  <a>{t("header.header-types-domino-klassicheskoe")}</a>
                 </Link>}
               </div>
               <div className="menu_item">
                 {locale === "ru" ? <Link
                   href="/[lang]/domino-5" as={`/${locale}/domino-5`}>
-                  <a target="_blank">{t("header.header-types-domino-5")}</a>
+                  <a>{t("header.header-types-domino-5")}</a>
                 </Link> : <Link
                   href="/[lang]/all-fives-dominoes" as={`/${locale}/all-fives-dominoes`}>
-                  <a target="_blank">{t("header.header-types-domino-5")}</a>
+                  <a>{t("header.header-types-domino-5")}</a>
                 </Link>}
               </div>
               <div className="menu_item">
                 {locale === "ru" ? <Link
                   href="/[lang]/domino-bloc" as={`/${locale}/domino-bloc`}>
-                  <a target="_blank">{t("header.header-types-domino-bloc")}</a>
+                  <a>{t("header.header-types-domino-bloc")}</a>
                 </Link> : <Link
                   href="/[lang]/blocks-dominoes" as={`/${locale}/blocks-dominoes`}>
-                  <a target="_blank">{t("header.header-types-domino-bloc")}</a>
+                  <a>{t("header.header-types-domino-bloc")}</a>
                 </Link>}
               </div>
             </div>
@@ -73,10 +73,10 @@ const Navigation = () => {
           <li className="list_item">
             {locale === "ru" ? <Link
               href="/[lang]/strategiya-v-domino" as={`/${locale}/strategiya-v-domino`}>
-              <a target="_blank">{t("header.header-strategy")}</a>
+              <a>{t("header.header-strategy")}</a>
             </Link> : <Link
               href="/[lang]/how-to-play-dominoes" as={`/${locale}/how-to-play-dominoes`}>
-              <a target="_blank">{t("header.header-strategy")}</a>
+              <a>{t("header.header-strategy")}</a>
             </Link>}
           </li>
         </ul>

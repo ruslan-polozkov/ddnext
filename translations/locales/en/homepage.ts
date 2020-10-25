@@ -2,8 +2,7 @@ const homepage = {
   "hero_title": "EN ens",
   "artist": "The Artist",
   "notAPipe": "This is not a pipe",
-  "main-title": "\n" +
-    "Dominoes are a fun way to relax!",
+  "main-title": "Dominoes are a fun way to relax!",
   "main-text": "Dominoes is a popular board game in which players line up a chain of dice that meet in halves with the same number of points.",
   "twoTitle": "Dominoes",
   "twoText": "This game not only develops mathematical skills, but also develops analytical qualities in a person. Therefore, it doesn't matter where and what kind of dominoes you play. The main thing is to get genuine pleasure from the process.",
@@ -27,7 +26,15 @@ const homepage = {
   "header.header-types-domino-klassicheskoe": "Domino classic",
   "header.header-types-domino-5": "Domino five",
   "header.header-types-domino-bloc": "Domino bloc",
-  "header.header-strategy": "Strategy game"
+  "header.header-strategy": "Strategy game",
+  "footer.footer-logo-desc": "You are ready? Download the app to start playing now!",
+  "advantages.context_title": "Domino benefits",
+  "advantages.context_text": "Play dominoes for free anytime anywhere! Improve your strategy skills with this classic game",
+  "advantages.context_list_item_txt_01": "100% Free to Play",
+  "advantages.context_list_item_txt_02": "3 versions of Dominoes: Fives, Block or Classic",
+  "advantages.context_list_item_txt_03": "Play Online or Offline (no internet)",
+  "advantages.context_list_item_txt_04": "Customize the design of boards and domino tiles!",
+  "advantages.context_list_item_txt_05": "The ability to play with friends or random opponents!"
 }
 
 export default homepage

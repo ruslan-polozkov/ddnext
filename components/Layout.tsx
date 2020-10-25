@@ -24,12 +24,6 @@ const Layout: React.FC<Props> = ({  children }) => {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
       </Head>
       <Header />
-      <style jsx global>{`
-        * {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-            Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-      `}</style>
       <>{children}</>
       <Footer />
     </>

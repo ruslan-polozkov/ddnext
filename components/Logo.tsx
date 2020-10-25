@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "next/link";
+// import Link from "next/link";
 import useTranslation from '../hooks/useTranslation'
 
 const Logo = () => {
@@ -7,10 +7,10 @@ const Logo = () => {
 
   return (
     <div className="logo" lang={locale}>
-      <Link href="/">
-        {/*<Img fixed={data.image.childImageSharp.fixed} alt="Domino" />*/}
+      <a href="/">
+        <img src={"/img/logo.png"} alt="Dominoes" style={{marginRight: "1rem"}}/>
         <span>Dominoes</span>
-      </Link>
+      </a>
     </div>
   )
 }
