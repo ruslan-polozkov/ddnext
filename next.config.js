@@ -28,7 +28,7 @@ module.exports = withSass(withFonts({
         return [
             // Optional Language
             // Query object shape: { lang?: string }
-            { source: "/:lang(en)?/domino", destination: "en/dominoes" },
+            { source: "/:lang(en)?/domino", destination: "/en/dominoes" },
         ];
     }
 }));
